@@ -5,10 +5,10 @@ module.exports = {
   },
   extends: [
     "plugin:react/recommended",
-    "plugin:storybook/recommended",
     "airbnb",
     "airbnb-typescript",
     "next/core-web-vitals",
+    "plugin:storybook/recommended",
   ],
   overrides: [],
   parserOptions: {
