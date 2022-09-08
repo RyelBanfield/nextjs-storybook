@@ -1,46 +1,25 @@
-import './button.css';
-
 import React from 'react';
 
 type ButtonProps = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
   size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
   label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
 };
 
-/**
- * Primary UI component for user interaction
- */
+const sizes = {
+  small: 'text-xs py-1 px-2',
+  medium: 'text-base py-2 px-4',
+  large: 'text-lg py-3 px-6',
+};
+
 const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
+  size = 'medium', label, ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const sizeClasses = sizes[size];
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={`font-bold rounded cursor-pointer bg-red-900 text-white ${sizeClasses}`}
       {...props}
     >
       {label}
