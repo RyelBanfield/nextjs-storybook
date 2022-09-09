@@ -4,34 +4,35 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb-typescript",
-    "next/core-web-vitals",
-    "plugin:storybook/recommended",
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'next/core-web-vitals',
+    'prettier',
+    'plugin:storybook/recommended',
   ],
   overrides: [],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: "./tsconfig.json",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
   },
-  plugins: ["react", "simple-import-sort"],
+  plugins: ['react', 'simple-import-sort'],
   rules: {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": [
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': [
       2,
       {
-        namedComponents: "arrow-function",
+        namedComponents: 'arrow-function',
       },
     ],
-    "import/no-extraneous-dependencies": [
-      "error",
+    'import/no-extraneous-dependencies': [
+      'error',
       {
-        devDependencies: ["**/*.stories.*", "**/.storybook/**/*.*"],
+        devDependencies: ['**/*.stories.*', '**/.storybook/**/*.*'],
         peerDependencies: true,
       },
     ],
