@@ -10,7 +10,7 @@ type Props = {
 
 const Bestseller = ({ title, brand, price, image, active }: Props) => {
   const activeClasses = "flex h-[120px] w-[311px] rounded-3xl bg-[#FEF2EE]";
-  const inactiveClasses = "flex h-[120px] w-[311px] rounded-3xl";
+  const inactiveClasses = "flex h-[120px] w-[311px] rounded-3xl bg-white";
 
   return (
     <div className={active ? activeClasses : inactiveClasses}>
