@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Chat = ({ avatar, name, title, body }: Props) => (
-  <div className="h-[212px] w-[375px] rounded-3xl">
+  <div className="h-[212px] w-[375px] rounded-3xl font-mont">
     <div className="h-[154px] rounded-t-3xl bg-[#4643D3] px-[32px] py-[22px]">
       <div className="flex">
         <div className="mr-[15px] mb-[17px] h-12 w-12">
